@@ -1,56 +1,87 @@
-# Dynamous Kiro Hackathon Quickstart Template
+# China Trade Surplus Analysis - Interactive Data Visualization Platform
 
-🚀 **Your starting point for the Dynamous and Kiro Hackathon** - A comprehensive template with pre-configured Kiro CLI setup, development workflows, and submission guidelines.
+An interactive data visualization platform showcasing China's historic $1.2 trillion trade surplus in 2025. This educational tool transforms complex economic data into compelling visual narratives, revealing the structural drivers behind this unprecedented trade phenomenon.
 
-> **📖 New to Kiro?** Check out [kiro-guide.md](kiro-guide.md) to quickly get accustomed to how Kiro works and understand its unique features for the hackathon.
+## Prerequisites
 
-## About the Hackathon
-
-The **Kiro Hackathon** is a coding competition where developers build real-world applications using the Kiro CLI. Show off your AI-powered development skills and compete for **$17,000 in prizes**.
-
-- **📅 Dates**: January 5-23, 2026
-- **💰 Prize Pool**: $17,000 across 10 winners
-- **🎯 Theme**: Open - build anything that solves a real problem
-- **🔗 More Info**: [dynamous.ai/kiro-hackathon](https://dynamous.ai/kiro-hackathon)
-
-## What's Included
-
-This template provides everything you need to get started:
-
-- **📋 Steering Documents**: Pre-configured project templates (product.md, tech.md, structure.md)
-- **⚡ Custom Prompts**: 11 powerful development workflow prompts
-- **📖 Examples**: Sample README and DEVLOG showing best practices
-- **🏆 Hackathon Tools**: Specialized code review prompt for submission evaluation
+- Node.js 18+
+- Git
+- Kiro CLI installed and authenticated
+- Modern web browser with WebGL support (for 3D visualizations)
 
 ## Quick Start
 
-### 1. Clone This Template
-```bash
-git clone https://github.com/coleam00/dynamous-kiro-hackathon
-cd dynamous-kiro-hackathon
+1. **Clone and setup**
+   ```bash
+   git clone https://github.com/username/china-trade-surplus-analysis
+   cd china-trade-surplus-analysis
+   cd frontend
+   npm install
+   ```
+
+2. **Run the application**
+   ```bash
+   npm run dev
+   ```
+
+3. **Access the interface**
+   - Web UI: http://localhost:5173
+   - Development server with hot reload enabled
+
+## Architecture & Codebase Overview
+
+### System Architecture
+- **Frontend**: React 18 with TypeScript and Vite
+- **Visualization**: D3.js, Chart.js, Three.js for interactive data visualization
+- **Styling**: Tailwind CSS with custom color schemes
+- **Data Processing**: Mock services with structured data transformation
+- **Testing**: Jest with React Testing Library
+
+### Directory Structure
+```
+china-trade-surplus-analysis/
+├── frontend/
+│   ├── src/
+│   │   ├── components/    # Reusable UI components
+│   │   │   ├── charts/    # Chart and visualization components
+│   │   │   └── maps/      # Geographic visualization components
+│   │   ├── pages/         # Main application pages
+│   │   ├── hooks/         # Custom React hooks for data management
+│   │   ├── services/      # Data processing and mock API services
+│   │   ├── types/         # TypeScript type definitions
+│   │   └── utils/         # Utility functions
+│   └── package.json
+├── .agents/               # Development plans and code reviews
+├── .kiro/
+│   ├── steering/          # Project guidelines and architecture docs
+│   └── prompts/           # Custom Kiro development commands
+└── data/                  # Research documents and analysis
 ```
 
-### 2. Run the Setup Wizard
-```bash
-@quickstart
-```
+### Key Components
+- **Dashboard** (`frontend/src/pages/Dashboard.tsx`): "New Three" exports overview with interactive charts
+- **Timeline** (`frontend/src/pages/Timeline.tsx`): Historical trade surplus evolution visualization
+- **Geographic Pivot** (`frontend/src/pages/Comparison.tsx`): Regional trade flow analysis and mapping
+- **3D Globe** (`frontend/src/pages/ThreeVisualization.tsx`): Three.js trade flow visualization (currently disabled)
 
-This assumes you already have Kiro CLI installed and that you started with the `kiro-cli` command in your terminal.
+## Deep Dive
 
-This interactive wizard will:
-- ✅ Fill out your steering documents with project details
-- ✅ Configure your development workflow
-- ✅ Set up Kiro CLI for your specific project
-- ✅ Explain all available prompts and features
+### Data Visualization Features
+1. **Interactive Trade Flow Analysis**: Real-time exploration of China's export patterns
+2. **"New Three" Exports Dashboard**: EVs, batteries, and solar panels growth visualization
+3. **Geographic Pivot Mapping**: Visual representation of trade route shifts from US to Global South
+4. **Historical Timeline**: Animated progression of trade surplus from 2010-2025
 
-### 3. Start Building
-Your project is now configured! Use these core prompts:
-- **`@prime`** - Load project context
-- **`@plan-feature`** - Plan new features
-- **`@execute`** - Implement plans systematically
-- **`@code-review`** - Review code quality
+### Kiro CLI Integration
+- **Custom Prompts**: `@prime`, `@plan-feature`, `@execute`, `@code-review` for development workflow
+- **Steering Documents**: Comprehensive project guidelines and technical architecture
+- **Automated Planning**: Detailed implementation plans for each visualization feature
 
-**Note:** Your typical workflow will be `@prime` → `@plan-feature` → `@execute` → `@code-review`, but feel free to change it however you want. These commands may require additional details (like what feature to plan or which plan file to execute), but Kiro will ask for these parameters after you invoke the command.
+### Technical Innovations
+- **Mock Data Services**: Realistic trade data simulation for development
+- **Responsive Design**: Mobile-first approach with progressive enhancement
+- **Type-Safe Architecture**: Full TypeScript implementation with strict configuration
+- **Component Composition**: Reusable visualization components with consistent APIs
 
 ## Development Workflow (Customize this However You Want!)
 
@@ -173,12 +204,36 @@ These examples show the level of detail and professionalism expected for hackath
 - **Customize your `.kiro/` configuration** as you learn your workflow
 - **Run `@code-review-hackathon`** periodically to compare your project against the judging rubric and before submitting
 
-## Getting Help
+## Troubleshooting
 
-- **Kiro CLI Documentation**: [kiro.dev/docs/cli](https://kiro.dev/docs/cli)
-- **Hackathon Community**: Join the Dynamous community for support
-- **Built-in Help**: Use `/help` in Kiro CLI for command assistance
+### Common Issues
 
----
+**Development server won't start**
+- Check Node.js version: `node --version` (requires 18+)
+- Clear dependencies: `rm -rf node_modules && npm install`
+- Verify port 5173 is available
 
-**Ready to build something amazing?** Run `@quickstart` and let's get started! 🚀
+**Charts not rendering**
+- Check browser console for JavaScript errors
+- Ensure all dependencies are installed: `npm install`
+- Verify data services are returning mock data correctly
+
+**3D Globe not working**
+- Currently disabled due to WebGL compatibility issues
+- Check browser WebGL support: visit `chrome://gpu/`
+- Will be re-enabled after WebGL environment fixes
+
+**TypeScript compilation errors**
+- Run type checking: `npm run build`
+- Check tsconfig.json configuration
+- Verify all type definitions are properly imported
+
+### Performance Issues
+- **Slow chart rendering**: Reduce data points or implement data sampling
+- **Memory usage**: Check for memory leaks in D3.js animations
+- **Bundle size**: Analyze with `npm run build` and check output
+
+### Getting Help
+- Check browser developer console for errors
+- Review Kiro CLI documentation: `/help` in chat
+- Open an issue with error details and browser information
