@@ -1,0 +1,29 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "China",
+        "ISO_A3": "CHN",
+        "REGION": "Asia"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[100, 30], [120, 30], [120, 50], [100, 50], [100, 30]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "United States",
+        "ISO_A3": "USA",
+        "REGION": "North America"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-120, 30], [-80, 30], [-80, 50], [-120, 50], [-120, 30]]]
+      }
+    }
+  ]
+}

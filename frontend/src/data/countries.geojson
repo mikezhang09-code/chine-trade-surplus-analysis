@@ -1,0 +1,16 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "China",
+        "iso_a3": "CHN"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[100, 30], [120, 30], [120, 50], [100, 50], [100, 30]]]
+      }
+    }
+  ]
+}
