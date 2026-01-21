@@ -2,11 +2,11 @@ import { useState } from 'react';
 import Dashboard from './pages/Dashboard';
 import Timeline from './pages/Timeline';
 import Comparison from './pages/Comparison';
-import ThreeVisualization from './pages/ThreeVisualization';
+// import ThreeVisualization from './pages/ThreeVisualization';
 import './styles/index.css';
 
 function App() {
-  const [currentPage, setCurrentPage] = useState<'dashboard' | 'timeline' | 'comparison' | 'three'>('dashboard');
+  const [currentPage, setCurrentPage] = useState<'dashboard' | 'timeline' | 'comparison'>('dashboard');
 
   const renderPage = () => {
     switch (currentPage) {
@@ -16,8 +16,6 @@ function App() {
         return <Timeline />;
       case 'comparison':
         return <Comparison />;
-      case 'three':
-        return <ThreeVisualization />;
       default:
         return <Dashboard />;
     }
@@ -63,13 +61,11 @@ function App() {
               >
                 Geographic Pivot
               </button>
+              {/* Temporarily disabled 3D Globe due to WebGL issues */}
               <button
-                onClick={() => setCurrentPage('three')}
-                className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
-                  currentPage === 'three'
-                    ? 'bg-blue-100 text-blue-700'
-                    : 'text-gray-600 hover:text-gray-900'
-                }`}
+                disabled
+                className="px-4 py-2 rounded-md text-sm font-medium text-gray-400 cursor-not-allowed"
+                title="3D Globe temporarily disabled in web environment"
               >
                 3D Globe
               </button>
