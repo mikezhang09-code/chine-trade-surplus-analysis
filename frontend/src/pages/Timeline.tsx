@@ -87,7 +87,7 @@ const Timeline: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
           className="mb-8"
         >
           <h1 className="text-3xl font-bold text-gray-900 mb-2">
@@ -145,7 +145,7 @@ const Timeline: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          transition={{ duration: 2.0, delay: 1.0, ease: "easeOut" }}
           className="mt-12 bg-white rounded-lg shadow-lg p-6"
         >
           <h2 className="text-xl font-semibold text-gray-900 mb-4">Key Timeline Insights</h2>
@@ -181,7 +181,7 @@ const Timeline: React.FC = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
+          transition={{ duration: 2.5, delay: 1.5, ease: "easeInOut" }}
           className="mt-8 text-center text-gray-500 text-sm"
         >
           <p>

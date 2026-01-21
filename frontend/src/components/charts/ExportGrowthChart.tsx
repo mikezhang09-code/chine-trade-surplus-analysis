@@ -33,10 +33,10 @@ interface ExportGrowthChartProps {
 export const ExportGrowthChart: React.FC<ExportGrowthChartProps> = ({ data, loading }) => {
   if (loading) {
     return (
-      <div className="bg-white rounded-lg shadow-lg p-6 h-96">
+      <div className="bg-white rounded-lg shadow-lg p-6 h-[1000px]">
         <div className="animate-pulse">
           <div className="h-6 bg-gray-200 rounded w-1/3 mb-4"></div>
-          <div className="h-80 bg-gray-200 rounded"></div>
+          <div className="h-[920px] bg-gray-200 rounded"></div>
         </div>
       </div>
     );
@@ -151,7 +151,7 @@ export const ExportGrowthChart: React.FC<ExportGrowthChartProps> = ({ data, load
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
-      <div className="h-96">
+      <div className="h-[1000px]">
         <Line data={chartData} options={options} />
       </div>
       <div className="mt-4 text-sm text-gray-600">

@@ -29,10 +29,10 @@ interface ComparativeAnalysisProps {
 export const ComparativeAnalysis: React.FC<ComparativeAnalysisProps> = ({ data, loading }) => {
   if (loading) {
     return (
-      <div className="bg-white rounded-lg shadow-lg p-6 h-96">
+      <div className="bg-white rounded-lg shadow-lg p-6 h-[1200px]">
         <div className="animate-pulse">
           <div className="h-6 bg-gray-200 rounded w-1/2 mb-4"></div>
-          <div className="h-80 bg-gray-200 rounded"></div>
+          <div className="h-[1120px] bg-gray-200 rounded"></div>
         </div>
       </div>
     );
@@ -40,7 +40,7 @@ export const ComparativeAnalysis: React.FC<ComparativeAnalysisProps> = ({ data, 
 
   if (data.length === 0) {
     return (
-      <div className="bg-white rounded-lg shadow-lg p-6 h-96 flex items-center justify-center">
+      <div className="bg-white rounded-lg shadow-lg p-6 h-[1200px] flex items-center justify-center">
         <p className="text-gray-500">No data available</p>
       </div>
     );
@@ -162,7 +162,7 @@ export const ComparativeAnalysis: React.FC<ComparativeAnalysisProps> = ({ data, 
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
-      <div className="h-80 mb-6">
+      <div className="h-[900px] mb-6">
         <Bar data={chartData} options={options} />
       </div>
       

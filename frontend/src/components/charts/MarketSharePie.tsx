@@ -19,10 +19,10 @@ interface MarketSharePieProps {
 export const MarketSharePie: React.FC<MarketSharePieProps> = ({ data, loading }) => {
   if (loading) {
     return (
-      <div className="bg-white rounded-lg shadow-lg p-6 h-96">
+      <div className="bg-white rounded-lg shadow-lg p-6 h-[1000px]">
         <div className="animate-pulse">
           <div className="h-6 bg-gray-200 rounded w-2/3 mb-4"></div>
-          <div className="h-80 bg-gray-200 rounded-full mx-auto w-80"></div>
+          <div className="h-[800px] bg-gray-200 rounded-full mx-auto w-[800px]"></div>
         </div>
       </div>
     );
@@ -30,7 +30,7 @@ export const MarketSharePie: React.FC<MarketSharePieProps> = ({ data, loading })
 
   if (!data) {
     return (
-      <div className="bg-white rounded-lg shadow-lg p-6 h-96 flex items-center justify-center">
+      <div className="bg-white rounded-lg shadow-lg p-6 h-[1000px] flex items-center justify-center">
         <p className="text-gray-500">No data available</p>
       </div>
     );
@@ -92,7 +92,7 @@ export const MarketSharePie: React.FC<MarketSharePieProps> = ({ data, loading })
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
-      <div className="h-80">
+      <div className="h-[900px]">
         <Pie data={chartData} options={options} />
       </div>
       

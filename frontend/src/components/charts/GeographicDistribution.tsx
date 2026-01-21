@@ -33,10 +33,10 @@ export const GeographicDistribution: React.FC<GeographicDistributionProps> = ({ 
 
   if (loading) {
     return (
-      <div className="bg-white rounded-lg shadow-lg p-6 h-96">
+      <div className="bg-white rounded-lg shadow-lg p-6 h-[1000px]">
         <div className="animate-pulse">
           <div className="h-6 bg-gray-200 rounded w-1/2 mb-4"></div>
-          <div className="h-80 bg-gray-200 rounded"></div>
+          <div className="h-[920px] bg-gray-200 rounded"></div>
         </div>
       </div>
     );
@@ -175,7 +175,7 @@ export const GeographicDistribution: React.FC<GeographicDistributionProps> = ({ 
         </div>
       </div>
       
-      <div className="h-80">
+      <div className="h-[900px]">
         <Bar data={chartData} options={options} />
       </div>
       

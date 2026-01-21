@@ -24,8 +24,21 @@ An interactive data visualization platform showcasing China's historic $1.2 tril
    npm run dev
    ```
 
-3. **Access the interface**
-   - Web UI: http://localhost:5173
+3. **Build and preview (alternative)**
+   ```bash
+   # Build the production version
+   npm run build
+   
+   # Preview the built app
+   npm run preview
+   
+   # Or use npx directly
+   npx vite preview --host 0.0.0.0 --port 4173
+   ```
+
+4. **Access the interface**
+   - Development: http://localhost:5173 or http://mike-code-vps.duckdns.org:5173
+   - Preview: http://localhost:4173 or http://mike-code-vps.duckdns.org:4173
    - Development server with hot reload enabled
 
 ## Architecture & Codebase Overview

@@ -81,20 +81,20 @@ const Dashboard: React.FC = () => {
         <NewThreeOverview metrics={overviewMetrics} loading={loading} />
 
         {/* Main Dashboard Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+        <div className="grid grid-cols-1 xl:grid-cols-3 gap-8 mb-8">
           {/* Export Growth Chart - Takes 2 columns */}
-          <div className="lg:col-span-2">
+          <div className="xl:col-span-2">
             <ExportGrowthChart data={exportData} loading={loading} />
           </div>
           
           {/* Market Share Pie Chart - Takes 1 column */}
-          <div className="lg:col-span-1">
+          <div className="xl:col-span-1">
             <MarketSharePie data={comparisonData} loading={loading} />
           </div>
         </div>
 
         {/* Second Row */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
           {/* Geographic Distribution */}
           <GeographicDistribution data={regionalData} loading={loading} />
           
