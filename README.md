@@ -13,8 +13,8 @@ An interactive data visualization platform showcasing China's historic $1.2 tril
 
 1. **Clone and setup**
    ```bash
-   git clone https://github.com/username/china-trade-surplus-analysis
-   cd china-trade-surplus-analysis
+   git clone https://github.com/mikezhang09-code/chine-trade-surplus-analysis.git
+   cd chine-trade-surplus-analysis
    cd frontend
    npm install
    ```
@@ -61,7 +61,7 @@ china-trade-surplus-analysis/
 ### Key Components
 - **Dashboard** (`frontend/src/pages/Dashboard.tsx`): "New Three" exports overview with interactive charts
 - **Timeline** (`frontend/src/pages/Timeline.tsx`): Historical trade surplus evolution visualization
-- **Geographic Pivot** (`frontend/src/pages/Comparison.tsx`): Regional trade flow analysis and mapping
+- **Geographic Pivot** (`frontend/src/pages/Comparison.tsx`): Regional trade flow analysis and mapping (Geographic Pivot Analysis)
 - **3D Globe** (`frontend/src/pages/ThreeVisualization.tsx`): Three.js trade flow visualization (currently disabled)
 
 ## Deep Dive
